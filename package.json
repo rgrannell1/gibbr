@@ -1,0 +1,12 @@
+{
+	"name":
+		"gibbr",
+	"version":
+		"0.1.0",
+	"description":
+		"Gibbr swaps filenames for gibberish.",
+	"devDependencies": {
+		"test": ">=0.0.5"
+	}
+}
+

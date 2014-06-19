@@ -1,6 +1,13 @@
 Gibbr v0.1.0
 =============
 
+Gibbr is a simple, dumb tool for swapping filenames with random
+names.
+
+```js
+gibber ~/my-directory -ur
+```
+
 ### Requirements
 
 * Ubuntu, or possibly another UNIX distro. (tested on Ubuntu 13.10)
@@ -12,7 +19,7 @@ Gibbr v0.1.0
 
 To install node.js on Ubuntu use
 
-```
+```bash
 sudo add-apt-repository ppa:chris-lea/node.js
 sudo apt-get update
 sudo apt-get install nodejs
@@ -22,19 +29,19 @@ sudo apt-get install nodejs
 
 First, grab the repository from Github.
 
-```
+```bash
 git clone https://github.com/rgrannell1/gibbr
 cd gibbr
 ```
 
 Run the following command.
 
-```
+```bash
 sudo nano ~/.bashrc
 ```
 add the line,
 
-```
+```bash
 alias gibbr=path/to/gibbr.js
 ```
 and you're ready to go. You can now try the application out.
