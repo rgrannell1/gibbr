@@ -4,8 +4,10 @@ Gibbr v0.1.0
 Gibbr is a simple, dumb tool for swapping filenames with random
 names.
 
-```js
-gibber ~/my-directory -ur
+### Usage
+
+```bash
+gibbr ~/my-directory --recur
 ```
 
 ### Requirements
