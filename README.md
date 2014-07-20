@@ -48,6 +48,13 @@ add the line,
 ```bash
 alias gibbr=path/to/gibbr.js
 ```
+
+Run
+
+```
+. ~/.bashrc
+```
+
 and you're ready to go. You can now try the application out.
 
 ### Licence
