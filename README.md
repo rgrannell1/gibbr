@@ -31,24 +31,11 @@ sudo apt-get install nodejs
 
 #### - Gibbr
 
-First, grab the repository from Github.
+To install gibbr, run
 
-```bash
-git clone https://github.com/rgrannell1/gibbr
-cd gibbr
 ```
-
-Run the following command.
-
-```bash
-sudo nano ~/.bashrc
+wget -q -O - https://raw.githubusercontent.com/rgrannell1/gibbr/master/install.sh | bash
 ```
-add the line,
-
-```bash
-alias gibbr=path/to/gibbr.js
-```
-and you're ready to go. You can now try the application out.
 
 ### Licence
 
