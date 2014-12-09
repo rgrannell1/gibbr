@@ -1,12 +1,29 @@
 {
-	"name":
-		"gibbr",
-	"version":
-		"0.1.0",
-	"description":
-		"Gibbr swaps filenames for gibberish.",
-	"devDependencies": {
-		"test": ">=0.0.5"
-	}
-}
+	"name":         "gibbr",
+	"version":      "0.1.0",
 
+	"description":  "Gibbr swaps filenames for gibberish.",
+	"scripts": {
+		"test":     "node test/all.js"
+	},
+
+	"main":         "lib/docopt-gibbr.js",
+	"bin": {
+		"gibbr": "lib/docopt-gibbr.js"
+	},
+
+	"repository":   {
+		"type":     "git",
+		"url":      "https://github.com/rgrannell1/gibbr"
+	},
+	"bugs": {
+		"url":      "https://github.com/rgrannell1/gibbr/issues"
+	},
+	"keywords":     ["gibbr"],
+	"dependencies": {
+		"is": ">=0.1.0"
+	},
+	"preferGlobal": true,
+	"os":           ["linux", "darwin"],
+	"license":      "MIT"
+}
