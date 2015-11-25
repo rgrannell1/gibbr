@@ -1,5 +1,7 @@
 
-language: bash
+language: node_js
 sudo:     false
 script:
     - bash tests/system/test-gibbr.sh
+node_js:
+    - "5.0.0"
