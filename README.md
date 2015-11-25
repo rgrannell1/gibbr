@@ -10,33 +10,16 @@ Gibbr is a command-line tool for randomly renaming files.
 ### Usage
 
 ```bash
-ls myDirectory | gibbr --size 20 -- -
+gibbr --size 20 myFile0 myFile1 myFile2
+```
+
+```bash
+ls myDirectory | gibbr --size 20 -
 ```
 
 ### Requirements
 
-* Ubuntu, or possibly another UNIX distro. (tested on Ubuntu 13.10)
-* Node.js v0.10.20
-
-### Installation
-
-#### - Dependencies
-
-To install node.js on Ubuntu use
-
-```bash
-sudo add-apt-repository ppa:chris-lea/node.js
-sudo apt-get update
-sudo apt-get install nodejs
-```
-
-#### - Gibbr
-
-To install gibbr, run
-
-```
-wget -q -O - https://raw.githubusercontent.com/rgrannell1/gibbr/master/install.sh | bash
-```
+* Node.js >= v5.0.0
 
 ### Licence
 
