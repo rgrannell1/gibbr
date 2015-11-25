@@ -1,5 +1,7 @@
-Gibbr v0.2.0
+Gibbr v0.3.0
 =============
+
+[![Build Status](https://travis-ci.org/rgrannell1/gibbr.svg)](https://travis-ci.org/rgrannell1/gibbr)
 
 Gibbr is a simple, dumb tool for swapping filenames with random
 names.
