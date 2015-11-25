@@ -1,0 +1,5 @@
+
+language: bash
+
+script:
+	- bash tests/system/test-gibbr.sh
