@@ -3,15 +3,14 @@ Gibbr v0.3.0
 
 [![Build Status](https://travis-ci.org/rgrannell1/gibbr.svg)](https://travis-ci.org/rgrannell1/gibbr)
 
-Gibbr is a simple, dumb tool for swapping filenames with random
-names.
+Gibbr is a command-line tool for randomly renaming files.
 
 <img src="gibbr.gif"> </img>
 
 ### Usage
 
 ```bash
-gibbr ~/my-directory --recur
+ls myDirectory | gibbr --size 20 -- -
 ```
 
 ### Requirements
