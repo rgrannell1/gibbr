@@ -72,4 +72,4 @@ find test1/test1 | tail -n +2 | node $cli --size 100 -- -
 
 
 
-node tests/system/test-gibbr.js
+node tests/system/validate-gibbr.js

@@ -1,6 +1,6 @@
 
 language: node_js
-sudo:     false
+sudo: false
 script:
     - bash tests/system/test-gibbr.sh
 node_js:
