@@ -1,5 +1,5 @@
 
 language: bash
-
+sudo:     false
 script:
     - bash tests/system/test-gibbr.sh
