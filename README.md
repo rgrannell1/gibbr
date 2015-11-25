@@ -1,4 +1,4 @@
-Gibbr v0.1.0
+Gibbr v0.2.0
 =============
 
 Gibbr is a simple, dumb tool for swapping filenames with random

@@ -1,17 +1,10 @@
 {
 	"name":         "gibbr",
-	"version":      "0.1.0",
-
+	"version":      "0.2.0",
 	"description":  "Gibbr swaps filenames for gibberish.",
-	"scripts": {
-		"test":     "node test/all.js"
-	},
-
-	"main":         "lib/docopt-gibbr.js",
 	"bin": {
-		"gibbr": "lib/docopt-gibbr.js"
+		"gibbr": "cli/gibbr.js"
 	},
-
 	"repository":   {
 		"type":     "git",
 		"url":      "https://github.com/rgrannell1/gibbr"
@@ -21,7 +14,9 @@
 	},
 	"keywords":     ["gibbr"],
 	"dependencies": {
-		"is": ">=0.1.0"
+		"is": "rgrannell1/is",
+		"docopt": ">=0.6.2",
+		"babel-polyfill": ">=6.1.19"
 	},
 	"preferGlobal": true,
 	"os":           ["linux", "darwin"],
