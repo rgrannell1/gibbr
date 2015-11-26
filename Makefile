@@ -13,7 +13,7 @@ MOCHA_FLAGS   = $(NODE_FLAGS)
 # -- eslint
 
 ESLINT         = $(BIN)/eslint
-ESLINT_FLAGS   = --config config/eslint-config.json
+ESLINT_FLAGS   = --config config/eslint.json
 
 ## -- Docker
 
