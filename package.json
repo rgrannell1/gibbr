@@ -21,7 +21,7 @@
 		"is": "rgrannell1/is",
 		"docopt": ">=0.6.2",
 		"babel-polyfill": ">=6.1.19",
-		"seedrandom": "*"
+		"seedrandom": ">=2.4.2"
 	},
 	"preferGlobal": true,
 	"license": "MIT",
