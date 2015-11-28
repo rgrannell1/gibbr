@@ -18,7 +18,7 @@ RUN n stable
 COPY . /src
 
 WORKDIR /src
-RUN npm install --production
+RUN npm link && npm install -g --production
 
 
 
