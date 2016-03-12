@@ -20,9 +20,17 @@ const createDir = callback => {
 
 	var schema = dirSchema.randomSchema(10, 0.05)
 
+	console.log('test folder:')
+
+	console.log(JSON.stringify(schema, null, 4))
+
 	dirSchema.execSchema(process.cwd( ), schema)
 
-	setTimeout(callback, 5 * 1000)
+	setTimeout(( ) => {
+
+		setTimeout(callback, 5 * 1000)
+
+	}, 5 * 1000)
 
 }
 
