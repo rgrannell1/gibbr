@@ -37,7 +37,7 @@ dirSchema.execSchema = (currentPath, fsSchema) => {
 	} else if (is.array(fsSchema)) {
 
 		fsSchema.map(subSchema => {
-			dirSchema(currentPath, subSchema)
+			dirSchema.execSchema(currentPath, subSchema)
 		})
 
 	} else if (is.string(fsSchema)) {
