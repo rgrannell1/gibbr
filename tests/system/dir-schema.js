@@ -42,7 +42,7 @@ dirSchema.execSchema = (currentPath, fsSchema) => {
 
 	} else if (is.string(fsSchema)) {
 
-		fs.writeFile(fsSchema, '.', err => {
+		fs.writeFile(path.join(currentPath, fsSchema), '.', err => {
 			if (err) {
 				throw err
 			}
