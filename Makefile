@@ -1,26 +1,16 @@
 
-BIN          = ./node_modules/.bin
+NODE           = node
+DOCKER         = docker
+CONTAINER_NAME = rpgen
 
-NODE         = node
-NPM          = npm
-NODE_FLAGS   = --harmony_destructuring --harmony_rest_parameters
-
-# -- Mocha.
-
-MOCHA         = $(BIN)/mocha
-MOCHA_FLAGS   = $(NODE_FLAGS)
-
-# -- eslint
-
-ESLINT         = $(BIN)/eslint
+ESLINT         = ./node_modules/.bin/eslint
 ESLINT_FLAGS   = --config config/eslint.json
 
-## -- Docker
 
-DOCKER         = docker
-APP_PATH       = node_modules/gibbr
 
-CONTAINER_NAME = system-test-gibbr
+
+TEST_RENAME_CONTAINER  = $(CONTAINER_NAME)-test-rename
+TEST_INSTALL_CONTAINER = $(CONTAINER_NAME)-test-install
 
 
 
@@ -29,14 +19,11 @@ CONTAINER_NAME = system-test-gibbr
 eslint:
 	$(ESLINT) $(ESLINT_FLAGS) $(APP_PATH)
 
-npm-install:
-	$(NPM) install .
+docker-test-rename-build:
+	$(DOCKER) build --tag=$(TEST_NUMBERS_CONTAINER) -f dockerfiles/test-rename .
 
-docker-build:
-	$(DOCKER) build --tag=$(CONTAINER_NAME) .
+docker-test-rename-cleanbuild:
+	$(DOCKER) build --no-cache=true --tag=$(TEST_NUMBERS_CONTAINER) -f dockerfiles/test-rename .
 
-docker-cleanbuild:
-	$(DOCKER) build --tag=$(CONTAINER_NAME) --no-cache=true .
-
-docker-run:
-	$(DOCKER) run $(CONTAINER_NAME)
+docker-test-numbers-run:
+	$(DOCKER) run $(TEST_NUMBERS_CONTAINER)
