@@ -20,7 +20,7 @@ dirSchema.execSchema = (currentPath, fsSchema) => {
 
 	if (is.object(fsSchema)) {
 
-		Object.keys.forEach(dirPath => {
+		Object.keys(fsSchema).forEach(dirPath => {
 
 			fs.mkdir(dirPath, err => {
 
