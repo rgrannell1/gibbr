@@ -1,4 +1,4 @@
 sudo: required
 services:
   - docker
-script:  make docker-test-rename-build docker-test-numbers-run
+script:  make docker-test-rename-build docker-test-rename-run
