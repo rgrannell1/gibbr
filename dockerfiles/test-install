@@ -24,4 +24,4 @@ RUN npm link && npm install -g --only=dev
 
 
 
-CMD ["bash", "tests/system/test-gibbr.js"]
+CMD ["nodejs", "tests/system/test-gibbr.js"]
