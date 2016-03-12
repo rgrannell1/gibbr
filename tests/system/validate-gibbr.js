@@ -11,6 +11,8 @@ var assert = require('assert')
 
 
 
+console.log('validating system test output.')
+
 fs.readdirSync('test0/test/').forEach(fpath => {
 
 	assert(fpath.length >= 100, 'files not renamed')

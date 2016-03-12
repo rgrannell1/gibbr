@@ -1,1 +1,0 @@
-/home/ryan/Code/gibbr.js/gibbr/cli/gibbr.js

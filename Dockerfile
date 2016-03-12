@@ -2,10 +2,10 @@
 FROM ubuntu:15.10
 
 RUN apt-get update && apt-get install -y \
-	npm \
-	curl \
-	git \
-	build-essential && \
+	npm                                  \
+	curl                                 \
+	git                                  \
+	build-essential &&                   \
 	rm -rf /var/lib/apt/lists/*
 
 RUN ln -s /usr/bin/nodejs /usr/bin/node
@@ -18,7 +18,7 @@ RUN n stable
 COPY . /src
 
 WORKDIR /src
-RUN npm link && npm install -g --production
+RUN npm link && npm install -g --only=dev
 
 
 

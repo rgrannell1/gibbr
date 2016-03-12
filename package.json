@@ -3,7 +3,7 @@
 	"version": "0.3.0",
 	"description": "Gibbr swaps filenames for gibberish.",
 	"bin": {
-		"gibbr": "./bin/gibbr.js"
+		"gibbr": "./node_modules/gibbr/cli/gibbr.js"
 	},
 	"repository":   {
 		"type": "git",
