@@ -43,7 +43,9 @@ dirSchema.execSchema = (currentPath, fsSchema) => {
 	} else if (is.string(fsSchema)) {
 
 		fs.writeFile(fsSchema, '.', err => {
-			throw err
+			if (err) {
+				throw err
+			}
 		})
 
 	}
