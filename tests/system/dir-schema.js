@@ -27,7 +27,7 @@ dirSchema.execSchema = (currentPath, fsSchema) => {
 				if (err) {
 					throw err
 				} else {
-					dirSchema.create(path.join(currentPath, dirPath), fsSchema[dirPath])
+					dirSchema.execSchema(path.join(currentPath, dirPath), fsSchema[dirPath])
 				}
 
 			})
