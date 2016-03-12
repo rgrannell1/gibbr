@@ -20,10 +20,10 @@ eslint:
 	$(ESLINT) $(ESLINT_FLAGS) $(APP_PATH)
 
 docker-test-rename-build:
-	$(DOCKER) build --tag=$(TEST_NUMBERS_CONTAINER) -f dockerfiles/test-rename .
+	$(DOCKER) build --tag=$(TEST_RENAME_CONTAINER) -f dockerfiles/test-rename .
 
 docker-test-rename-cleanbuild:
-	$(DOCKER) build --no-cache=true --tag=$(TEST_NUMBERS_CONTAINER) -f dockerfiles/test-rename .
+	$(DOCKER) build --no-cache=true --tag=$(TEST_RENAME_CONTAINER) -f dockerfiles/test-rename .
 
-docker-test-numbers-run:
-	$(DOCKER) run $(TEST_NUMBERS_CONTAINER)
+docker-test-rename-run:
+	$(DOCKER) run $(TEST_RENAME_CONTAINER)
