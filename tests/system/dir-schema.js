@@ -67,7 +67,7 @@ dirSchema.randomName = ( ) => {
 	var out          = ''
 	var chars        = 'abcdefghijklmnopqrstuvwxyz'
 
-	const LENGTH     = 25
+	const LENGTH     = 5
 
 	for (let ith = 0; ith < LENGTH; ++ith) {
 		out += chars.charAt(Math.floor(Math.random( ) * chars.length))

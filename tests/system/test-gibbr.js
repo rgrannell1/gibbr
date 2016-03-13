@@ -11,7 +11,7 @@ const childProcess = require('child_process')
 
 
 
-const TEST_CASES = 10
+const TEST_CASES = 1
 
 
 
@@ -63,4 +63,4 @@ const loop = (fn, times) => {
 
 
 
-loop(createDir, 10)
+loop(createDir, TEST_CASES)
