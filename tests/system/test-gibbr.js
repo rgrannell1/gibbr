@@ -4,13 +4,28 @@
 
 
 
-const dirSchema = require('./dir-schema')
+const dirSchema    = require('./dir-schema')
+const childProcess = require('child_process')
 
 
 
 
 
 const TEST_CASES = 10
+
+
+
+
+const callGibbr = paths => {
+
+	const gibbr = childProcess.spawn('gibbr', ['--size', '42', '--',  '-'])
+
+	paths.forEach(fpath => {
+		gibbr.stdin.write(fpath)
+	})
+
+	gibbr.stdin.end( )
+}
 
 
 
@@ -25,6 +40,8 @@ const createDir = callback => {
 	const paths = dirSchema.flattenDirs(process.cwd( ), schema)
 
 	dirSchema.execSchema(process.cwd( ), schema)
+
+	callGibbr(paths)
 
 	setTimeout(( ) => {
 
