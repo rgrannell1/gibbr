@@ -18,11 +18,11 @@ const TEST_CASES = 10
 
 const createDir = callback => {
 
-	var schema = dirSchema.randomSchema(10, 0.05)
+	var schema = dirSchema.randomSchema(15, 0.05)
 
 	console.log('test folder:')
 
-	console.log(JSON.stringify(schema, null, 4))
+	const paths = dirSchema.flattenDirs(process.cwd( ), schema)
 
 	dirSchema.execSchema(process.cwd( ), schema)
 

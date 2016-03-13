@@ -1,31 +1,34 @@
 {
-	"name": "gibbr",
-	"version": "0.3.0",
-	"description": "Gibbr swaps filenames for gibberish.",
-	"bin": {
-		"gibbr": "./node_modules/gibbr/cli/gibbr.js"
-	},
-	"repository":   {
-		"type": "git",
-		"url": "https://github.com/rgrannell1/gibbr"
-	},
-	"bugs": {
-		"url": "https://github.com/rgrannell1/gibbr/issues"
-	},
-	"keywords": ["gibbr"],
-	"devDependencies": {
-		"eslint": "^1.9.0",
- 		"babel-eslint": ">=4.1.4"
-	},
-	"dependencies": {
-		"is": "rgrannell1/is",
-		"docopt": ">=0.6.2",
-		"babel-polyfill": ">=6.1.19",
-		"seedrandom": ">=2.4.2"
-	},
-	"preferGlobal": true,
-	"license": "MIT",
-	"engines": {
-		"node": ">=5.0.0"
-	}
+  "name": "gibbr",
+  "version": "0.3.0",
+  "description": "Gibbr swaps filenames for gibberish.",
+  "bin": {
+    "gibbr": "./node_modules/gibbr/cli/gibbr.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rgrannell1/gibbr"
+  },
+  "bugs": {
+    "url": "https://github.com/rgrannell1/gibbr/issues"
+  },
+  "keywords": [
+    "gibbr"
+  ],
+  "devDependencies": {
+    "eslint": "^1.9.0",
+    "babel-eslint": ">=4.1.4"
+  },
+  "dependencies": {
+    "babel-polyfill": ">=6.1.19",
+    "docopt": ">=0.6.2",
+    "is": "rgrannell1/is",
+    "mkdirp": "^0.5.1",
+    "seedrandom": ">=2.4.2"
+  },
+  "preferGlobal": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=5.0.0"
+  }
 }

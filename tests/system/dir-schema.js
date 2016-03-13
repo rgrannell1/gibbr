@@ -3,9 +3,10 @@
 
 
 
-const is   = require('is')
-const fs   = require('fs')
-const path = require('path')
+const is     = require('is')
+const fs     = require('fs')
+const path   = require('path')
+const mkdirp = require('mkdirp')
 
 
 
@@ -16,41 +17,47 @@ const dirSchema = { }
 
 
 
-dirSchema.execSchema = (currentPath, fsSchema) => {
+dirSchema.flattenDirs = (currentPath, fsSchema) => {
 
 	if (is.object(fsSchema)) {
 
-		Object.keys(fsSchema).forEach(dirPath => {
+		return Object.keys(fsSchema).reduce((acc, dirName) => {
 
-			fs.mkdir(dirPath, err => {
+			return acc.concat(
+				dirSchema.flattenDirs(path.join(currentPath, dirName), fsSchema[dirName]) )
 
-				if (err) {
-					throw err
-				} else {
-					dirSchema.execSchema(path.join(currentPath, dirPath), fsSchema[dirPath])
-				}
-
-			})
-
-		})
+		}, [ ])
 
 	} else if (is.array(fsSchema)) {
 
-		fsSchema.map(subSchema => {
-			dirSchema.execSchema(currentPath, subSchema)
-		})
+		return fsSchema.reduce((acc, subSchema) => {
+			return acc.concat(dirSchema.flattenDirs(currentPath, subSchema))
+		}, [ ])
 
 	} else if (is.string(fsSchema)) {
-
-		fs.writeFile(path.join(currentPath, fsSchema), '.', err => {
-			if (err) {
-				throw err
-			}
-		})
-
+		return path.join(currentPath, fsSchema)
 	}
 
 }
+
+
+
+
+
+dirSchema.execSchema = (currentPath, schema) => {
+
+	const paths = dirSchema.flattenDirs(currentPath, schema)
+
+	paths.forEach(fpath => {
+
+		mkdirp.sync(path.dirname(fpath))
+		fs.writeFileSync(fpath, 'xxx')
+
+	})
+
+}
+
+
 
 
 
