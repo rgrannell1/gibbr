@@ -63,10 +63,11 @@ dirSchema.execSchema = (currentPath, schema) => {
 
 dirSchema.randomName = ( ) => {
 
-	var LENGTH = 25
 
-	var out    = ''
-	var chars  = 'abcdefghijklmnopqrstuvwxyz'
+	var out          = ''
+	var chars        = 'abcdefghijklmnopqrstuvwxyz'
+
+	const LENGTH     = 25
 
 	for (let ith = 0; ith < LENGTH; ++ith) {
 		out += chars.charAt(Math.floor(Math.random( ) * chars.length))
@@ -78,6 +79,7 @@ dirSchema.randomName = ( ) => {
 
 dirSchema.randomSchema = (perFolder, folderChance) => {
 
+	const extensions = ['', '.txt', '.foo.bar.baz', '.pdf']
 	const folderName = dirSchema.randomName( )
 	const schema     = {
 		[folderName]: [ ]
@@ -85,13 +87,14 @@ dirSchema.randomSchema = (perFolder, folderChance) => {
 
 	for (let ith = 0; ith < perFolder; ++ith) {
 
-		const partName = dirSchema.randomName( )
-		const isFolder = Math.random( ) < folderChance
+		const partName  = dirSchema.randomName( )
+		const isFolder  = Math.random( ) < folderChance
+		const extension = extensions[Math.floor(Math.random( ) * extensions.length)]
 
 		schema[folderName].push(
 			isFolder
 				? dirSchema.randomSchema(perFolder, folderChance)
-				: partName
+				: partName  + extension
 		)
 
 	}
