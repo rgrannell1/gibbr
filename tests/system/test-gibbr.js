@@ -16,15 +16,17 @@ const TEST_CASES = 1
 
 
 
-const callGibbr = paths => {
 
-	const gibbr = childProcess.spawn('gibbr', ['--size', '42', '--',  '-'])
+const gibbr = { }
+
+gibbr.stdin = (paths, size) => {
+
+	const gibbrProc = childProcess.spawn( 'gibbr', [`--size ${size}`, `--`, '-'] )
 
 	paths.forEach(fpath => {
-		gibbr.stdin.write(fpath)
+		gibbrProc.stdin.write(fpath)
 	})
 
-	gibbr.stdin.end( )
 }
 
 
@@ -41,7 +43,7 @@ const createDir = callback => {
 
 	dirSchema.execSchema(process.cwd( ), schema)
 
-	callGibbr(paths)
+	gibbr.stdin(paths)
 
 	setTimeout(( ) => {
 
