@@ -12,7 +12,7 @@ const constants = {
 	charset: {
 
 	},
-	package: require('../../../package.json'),
+	package: require('../../package.json'),
 	messages: {
 		PRESERVE_ROOT: 'attempted to rename "/" without "--no-preserve-root" option'
 	}

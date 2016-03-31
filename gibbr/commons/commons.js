@@ -7,7 +7,7 @@
 const is        = require('is')
 const path      = require('path')
 
-const constants = require('gibbr/commons/constants')
+const constants = require('../commons/constants')
 
 
 
@@ -19,6 +19,8 @@ const commons = { }
 
 
 commons.mapStdin = callback => {
+
+	console.log('foo')
 
 	var currentPath = [ ]
 

@@ -17,8 +17,8 @@ const is = require('is')
 
 
 
-const constants    = require('gibbr/commons/constants')
-const renamePaths = require('gibbr/fs/rename-paths')
+const constants   = require('../commons/constants')
+const renamePaths = require('../fs/rename-paths')
 
 
 
@@ -48,7 +48,7 @@ gibbr.preproccess = rawArgs => {
 
 	try {
 
-		const size = parseInt(rawArgs['--size'], 10)
+		var size = parseInt(rawArgs['--size'], 10)
 
 	} catch (err) {
 		throw new Error('failed to parse "--size" argument.')

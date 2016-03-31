@@ -11,8 +11,8 @@ const is         = require('is')
 
 
 
-const commons    = require('gibbr/commons/commons')
-const renamePath = require('gibbr/fs/rename-path')
+const commons    = require('../commons/commons')
+const renamePath = require('../fs/rename-path')
 
 
 

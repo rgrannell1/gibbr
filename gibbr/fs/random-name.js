@@ -6,9 +6,9 @@
 
 
 const path      = require('path')
-const commons   = require('gibbr/commons/commons')
-const constants = require('gibbr/commons/constants')
-const random    = require('gibbr/commons/random')
+const commons   = require('../commons/commons')
+const constants = require('../commons/constants')
+const random    = require('../commons/random')
 
 
 

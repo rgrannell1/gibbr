@@ -14,7 +14,7 @@ Usage:
 
 Options:
     -s SIZE, --size SIZE    the length of the new filename, excluding file extensions [default: 20].
-    --no-preserve-root      rename the root directory — '/' — if it is supplied as a path.
+    --no-preserve-root      rename the root directory '/' if it is supplied as a path.
     --preserve-root         never rename the root directory. Default behaviour.
     -h, --help              display this document.
     --version               display the version of this program.
@@ -47,10 +47,9 @@ Implementation:
 
 
 const docopt = require('docopt').docopt
-const args   = docopt(doc)
-const main   = require('gibbr/app/gibbr')
+const main   = require('../app/gibbr')
 
 
 
 
-main(args)
+main(docopt(doc))

@@ -7,8 +7,8 @@
 const is         = require('is')
 const fs         = require('fs')
 const path       = require('path')
-const randomName = require('gibbr/fs/random-name')
-const constants  = require('gibbr/commons/constants')
+const randomName = require('../fs/random-name')
+const constants  = require('../commons/constants')
 
 
 
