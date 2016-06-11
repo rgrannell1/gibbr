@@ -1,0 +1,16 @@
+name:        gibbr
+version:     v0.3.0
+summary:     gibbr is a utility for scrambling filenames.
+description: >
+  gibbr is a utility for scrambling filenames.
+license: LICENSE-MIT.md
+
+apps:
+  gibbr:
+    command: bin/gibbr
+
+parts:
+  gibbr:
+    plugin: nodejs
+    node-packages:
+      - rgrannell1/gibbr

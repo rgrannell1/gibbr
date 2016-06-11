@@ -27,3 +27,6 @@ docker-test-rename-cleanbuild:
 
 docker-test-rename-run:
 	$(DOCKER) run $(TEST_RENAME_CONTAINER)
+
+snap:
+	cd snapcraft && snapcraft clean && snapcraft snap && cd ..
