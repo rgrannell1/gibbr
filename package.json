@@ -2,6 +2,7 @@
   "name": "gibbr",
   "version": "0.3.0",
   "description": "Gibbr swaps filenames for gibberish.",
+  "preferGlobal": true,
   "bin": {
     "gibbr": "src/cli/gibbr.js"
   },
@@ -26,7 +27,6 @@
     "mkdirp": "^0.5.1",
     "seedrandom": ">=2.4.2"
   },
-  "preferGlobal": true,
   "license": "MIT",
   "engines": {
     "node": ">=5.0.0"
