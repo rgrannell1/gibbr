@@ -20,8 +20,6 @@ const commons = { }
 
 commons.mapStdin = callback => {
 
-	console.log('foo')
-
 	var currentPath = [ ]
 
 	process.stdin.on('readable', ( ) => {

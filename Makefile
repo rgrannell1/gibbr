@@ -30,3 +30,6 @@ docker-test-rename-run:
 
 snap:
 	cd snapcraft && snapcraft clean && snapcraft snap && cd ..
+
+install: snap
+	cd snapcraft && snap install gibbr_* && cd ..

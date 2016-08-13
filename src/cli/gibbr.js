@@ -28,7 +28,7 @@ Description:
 
 Implementation:
 
-    Gibbr does NOT recur into folders; to rename recursively pipe file names into gibbr
+    Gibbr does not recur into folders; to rename recursively pipe file names into gibbr
     from 'find', 'ls', or a similar utility.
 
     'Math.random( )' is not used, as it is poorly implemented in pre-2016 versions of V8. Instead, the xor4096
